@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+
+# Dossiers annexes / artefacts macOS (chemins trop longs pour git add sur Windows)
+MagicCliffsGodot/
+**/__MACOSX/
