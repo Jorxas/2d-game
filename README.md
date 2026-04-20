@@ -1,71 +1,71 @@
-# Prototype 2D (Phaser 3)
+# 2D-Prototyp (Phaser 3)
 
-## Commande pour lancer le jeu (recommandé)
+## Spiel starten (empfohlen)
 
-Dans le dossier du projet (PowerShell ou CMD) :
+Im Projektordner (PowerShell oder CMD):
 
 ```bash
 npm install
 npm run dev
 ```
 
-Ou **double-clic** sur `start-game.bat` (Windows).
+Oder **Doppelklick** auf `start-game.bat` (Windows).
 
-Le jeu s’ouvre sur **http://localhost:5173** — le menu et le plein écran fonctionnent en **HTTP** (pas en ouvrant `index.html` en double-clic).
+Das Spiel läuft unter **http://localhost:5173** — Menü und Vollbild funktionieren über **HTTP** (nicht durch Doppelklick auf `index.html`).
 
 ---
 
-## Assets Kenney (obligatoire pour les vrais graphismes)
+## Kenney-Assets (nötig für echte Grafiken)
 
-Le jeu charge **uniquement** les fichiers du pack **Pixel Platformer** de Kenney, même arborescence que le ZIP officiel :
+Das Spiel lädt **nur** Dateien aus dem **Pixel Platformer**-Pack von Kenney, mit derselben Ordnerstruktur wie im offiziellen ZIP:
 
 - `Characters/`
 - `Tilesheet/`
 - `Tiles/`
 
-### Option A — pack complet (recommandé)
+### Option A — vollständiges Pack (empfohlen)
 
-1. Téléchargez le pack : **https://kenney.nl/assets/pixel-platformer** (gratuit, CC0).
-2. Décompressez-le. Renommez le dossier en **`kenney_pixel-platformer`** à la racine du projet.
-3. Il doit contenir au minimum **`Characters/`**, **`Tilesheet/`**, **`Tiles/`** avec les **PNG** (fichiers séparés).
-4. Lancez `npm run dev` : copie automatique vers `public/kenney_pixel-platformer/`.
+1. Pack herunterladen: **https://kenney.nl/assets/pixel-platformer** (kostenlos, CC0).
+2. Entpacken. Ordner in **`kenney_pixel-platformer`** im Projektstamm umbenennen.
+3. Mindestens **`Characters/`**, **`Tilesheet/`**, **`Tiles/`** mit den **PNG**-Dateien (einzelne Bilder).
+4. `npm run dev` ausführen: automatische Kopie nach `public/kenney_pixel-platformer/`.
 
-### Option B — pack « Tilemap » seulement (PNG dans `Tilemap/`)
+### Option B — nur „Tilemap“-Pack (PNG in `Tilemap/`)
 
-Si tu as surtout la structure **Tiled** + dossier **`Tilemap/`** avec :
+Wenn du vor allem die **Tiled**-Struktur + Ordner **`Tilemap/`** mit hast:
 
 - `Tilemap/tilemap_packed.png`
 - `Tilemap/tilemap-characters_packed.png`
 
-…c’est suffisant : le jeu les charge en **spritesheets** (tuiles 18×18, persos 24×24) et découpe les personnages automatiquement. Les portes / effets optionnels sont chargés si tu ajoutes aussi **`Tilesheet/`** et **`Tiles/`** plus tard.
+…reicht das: Das Spiel lädt sie als **Spritesheets** (Kacheln 18×18, Figuren 24×24) und schneidet die Charaktere automatisch aus. Türen / optionale Effekte werden geladen, wenn du später **`Tilesheet/`** und **`Tiles/`** ergänzt.
 
-### Option C — copie manuelle
+### Option C — manuelle Kopie
 
-Copiez le pack dans **`public/kenney_pixel-platformer/`**.
+Pack nach **`public/kenney_pixel-platformer/`** kopieren.
 
-### Si les PNG manquent
+### Wenn PNG fehlen
 
-Ton dossier `kenney_pixel-platformer` ne doit **pas** se limiter aux fichiers `.txt` / Tiled du pack : il faut les **vrais dossiers avec les `.png`** (`Characters`, `Tilesheet`, `Tiles`). Sans ça, le lanceur met `KENNEY_ASSETS_READY=false` et le jeu démarre quand même avec des **textures générées** (couleurs).
-
----
-
-## Pourquoi ne pas ouvrir seulement index.html ?
-
-Les navigateurs bloquent souvent les **modules JavaScript** (`import`) en `file://`, et le **plein écran** est limité. Utilisez **`npm run dev`**.
+Der Ordner `kenney_pixel-platformer` soll **nicht** nur `.txt` / Tiled-Dateien enthalten: Es braucht die **echten Ordner mit `.png`** (`Characters`, `Tilesheet`, `Tiles`). Sonst setzt das Skript `KENNEY_ASSETS_READY=false` — das Spiel startet trotzdem mit **generierten** Platzhalter-Texturen (Farben).
 
 ---
 
-## Scripts utiles
+## Warum nicht nur `index.html` öffnen?
 
-| Commande           | Rôle                                      |
-|--------------------|-------------------------------------------|
-| `npm run dev`      | Synchronise les assets Kenney puis Vite   |
-| `npm run sync-assets` | Copie seulement `kenney_pixel-platformer` → `public/` |
-| `npm run build`    | Build de production                       |
+Browser blockieren oft **ES-Module** (`import`) unter `file://`, und **Vollbild** ist eingeschränkt. **`npm run dev`** verwenden.
 
 ---
 
-## Build statique (optionnel)
+## Nützliche Skripte
+
+| Befehl              | Zweck                                                |
+|---------------------|------------------------------------------------------|
+| `npm run dev`       | Kenney-Assets synchronisieren, dann Vite            |
+| `npm run sync-assets` | Nur `kenney_pixel-platformer` → `public/` kopieren |
+| `npm run build`     | Produktions-Build                                    |
+
+---
+
+## Statischer Build (optional)
 
 ```bash
 npm run build

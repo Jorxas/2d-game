@@ -1,6 +1,6 @@
 /**
- * Plein écran sur le conteneur du jeu (plus fiable que scale.startFullscreen() seul sur certains navigateurs).
- * À appeler depuis un geste utilisateur (clic, touche).
+ * Vollbild für den Spiel-Container (zuverlässiger als nur scale.startFullscreen() in manchen Browsern).
+ * Nur nach Nutzeraktion aufrufen (Klick, Taste).
  */
 
 export function isGameFullscreen() {
@@ -13,7 +13,7 @@ export function isGameFullscreen() {
 }
 
 /**
- * @returns {Promise<boolean>} true si la demande a été lancée (succès ou déjà en cours)
+ * @returns {Promise<boolean>} true, wenn die Anfrage gestartet wurde (Erfolg oder schon aktiv)
  */
 export async function toggleGameFullscreen() {
   const el = document.getElementById("game-root");
@@ -45,7 +45,7 @@ export async function toggleGameFullscreen() {
       return true;
     }
   } catch (err) {
-    console.warn("[Fullscreen] Impossible:", err?.message ?? err);
+    console.warn("[Vollbild] Nicht möglich:", err?.message ?? err);
   }
   return false;
 }

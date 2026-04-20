@@ -38,19 +38,19 @@ export const SLIME_SIZE = 34;
 export const SLIME_COLOR = 0xe53e3e;
 export const SLIME_SPEED = 60;
 export const SLIME_PATROL_DISTANCE = 150;
-/** PV de base des slimes (les variantes peuvent avoir 2–4 PV). */
+/** Basis-LP der Schleime (Varianten können 2–4 LP haben). */
 export const SLIME_MAX_HP = 3;
 export const XP_GEM_VALUE = 2;
 
 export const GLOBAL_GRAVITY_Y = 1100;
 
-/** Esquive / dash */
+/** Ausweichen / Dash */
 export const PLAYER_DASH_SPEED = 520;
 export const PLAYER_DASH_DURATION_MS = 140;
 export const PLAYER_DASH_COOLDOWN_MS = 650;
 export const PLAYER_DASH_INVULN_MS = 200;
 
-/** Vent / glace (multiplicateurs appliqués dans GameScene) */
+/** Wind / Eis (Multiplikatoren in GameScene angewendet) */
 export const WIND_ACCEL_PER_ZONE = 1;
 export const ICE_GROUND_DRAG = 380;
 export const ICE_AIR_DRAG = 280;

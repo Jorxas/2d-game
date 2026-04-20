@@ -1,10 +1,10 @@
 @echo off
 cd /d "%~dp0"
-echo Lancement du jeu (serveur local + assets Kenney si presents)...
+echo Starte das Spiel (lokaler Server + Kenney-Assets, falls vorhanden)...
 if not exist "node_modules\" (
-  echo Installation des dependances (premiere fois)...
+  echo Installiere Abhaengigkeiten (beim ersten Mal)...
   call npm install
 )
-echo Ouvrez http://localhost:5173 dans le navigateur si ca ne souvre pas tout seul.
+echo Browser: http://localhost:5173 oeffnen, falls sich nichts von selbst oeffnet.
 call npm run dev
 pause

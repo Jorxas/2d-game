@@ -1,24 +1,24 @@
-# Intrigue — Swordigo Clone (prototype)
+# Handlung — Swordigo-Klon (Prototyp)
 
-## Résumé
+## Kurz
 
-Un héros anonyme traverse des plaines, vallées, forêts et ruines pour récupérer une **épée légendaire** et affronter le **Sorcier du Trône**, qui corrompt les terres. La progression est découpée en **trois actes** liés aux zones du jeu.
+Ein namenloser Held durchquert Ebenen, Täler, Wälder und Ruinen, um ein **legendäres Schwert** zu holen und den **Thronzauberer** zu bekämpfen, der das Land verdirbt. Die Handlung ist in **drei Akte** gegliedert, die den Zonen entsprechen.
 
-## Acte I — Éveil et vallée
+## Akt I — Erwachen und Tal
 
-- **Plaines de l’Aube** : tutoriel implicite, premier affrontements, **plaque de pression** ouvrant un raccourci vers la vallée.
-- **Vallée de l’Est** : la **clé** est cachée au-delà des ennemis ; premier **boss majeur** : le **Grand Chevalier**.
+- **Morgenebenen**: stiller Einstieg, erste Kämpfe, **Druckplatte** öffnet eine Abkürzung ins Tal.
+- **Osttal**: der **Schlüssel** liegt hinter vielen Gegnern; erster **großer Boss**: der **Große Ritter**.
 
-## Acte II — Ombres et ruines
+## Akt II — Schatten und Ruinen
 
-- **Forêt des Murmures** puis **Ruines oubliées** : ambiance plus sombre, **énigme d’ordre** (statues) pour prouver la perspicacité du héros.
-- Ennemis de route plus denses (**chauves-souris**, **cracheurs**), vents et plateformes mobiles.
+- **Flüsterwald** dann **Vergessene Ruinen**: düsterere Stimmung, **Reihenfolge-Rätsel** (Statuen).
+- Mehr Gegner auf der Strecke (**Fledermäuse**, **Spucker**), Wind und bewegliche Plattformen.
 
-## Acte III — Vers le trône
+## Akt III — Zum Thron
 
-- **Zones montagneuses / arène** : le **Golem de Pierre** garde le passage — **deuxième boss majeur** avant l’assaut final.
-- **Grotte** (raccourci ou zone optionnelle selon la clé) et **château** : affrontement final contre le **Sorcier du Trône**.
+- **Gebirgszonen / Arena**: der **Steingolem** bewacht den Weg — **zweiter großer Boss** vor dem Finale.
+- **Höhle** (Abkürzung oder optional je nach Schlüssel) und **Schloss**: Endkampf gegen den **Thronzauberer**.
 
-## Fins / objectifs
+## Ziele / Ausgang
 
-- Récupérer la **clé**, vaincre les **boss** intermédiaires, ouvrir le **coffre légendaire**, puis triompher du **boss final**. Les quêtes in-game (journal **Q**) suivent cette ligne.
+**Schlüssel** holen, **Zwischenbosse** besiegen, die **legendäre Truhe** öffnen, dann den **Endboss** schlagen. Die Quests im Spiel (Tagebuch **Q**) folgen dieser Linie.

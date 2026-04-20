@@ -18,7 +18,7 @@ const config = {
     parent: "game-root",
     width: GAME_WIDTH,
     height: GAME_HEIGHT,
-    /** Cible du vrai plein écran navigateur (API Fullscreen) */
+    /** Ziel für echtes Browser-Vollbild (Fullscreen-API) */
     fullscreenTarget: "game-root",
   },
   pixelArt: true,

@@ -1,8 +1,8 @@
 import { WORLD_HEIGHT, WORLD_WIDTH } from "../config/constants.js";
 
 /**
- * Données des stages (largeur optionnelle, graphe leftZone/rightZone + portes).
- * Acte I: zone1–zone3 | Acte II: zone4–zone6 | Acte III: zone7–zone9 + cave | Finale: castle
+ * Stagedaten (optionale Breite, Graph leftZone/rightZone + Türen).
+ * Akt I: zone1–zone3 | Akt II: zone4–zone6 | Akt III: zone7–zone9 + cave | Finale: castle
  */
 
 const H = WORLD_HEIGHT;
@@ -36,7 +36,7 @@ function spreadSpitters(fromX, toX, y, count) {
   }));
 }
 
-/** Plateformes [tileX, tileY, width] — répétition de motifs pour stages longs */
+/** Plattformen [tileX, tileY, width] — Musterwiederholung für lange Stages */
 function platformsStandard(wTiles) {
   return [
     [12, 40, 11],
@@ -678,7 +678,7 @@ export const ZONES = {
   },
 };
 
-/** Largeur monde pour une zone (fallback WORLD_WIDTH). */
+/** Weltbreite pro Zone (Fallback WORLD_WIDTH). */
 export function getZoneWidth(zone) {
   return zone?.zoneWidth ?? WORLD_WIDTH;
 }

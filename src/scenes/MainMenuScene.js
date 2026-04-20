@@ -23,7 +23,7 @@ export class MainMenuScene extends Phaser.Scene {
       .setScrollFactor(0);
 
     this.add
-      .text(width * 0.5, 130, "Swordigo Clone", {
+      .text(width * 0.5, 130, "Swordigo-Klon", {
         fontFamily: "Courier New",
         fontSize: "58px",
         color: "#f8f0ff",

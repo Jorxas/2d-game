@@ -1,8 +1,8 @@
 import { kenneyUrl } from "../config/assetUrls.js";
 
 /**
- * Pack Kenney « court » : PNG dans Tilemap/ (voir Tiled/*.tsx).
- * tilemap_packed.png = tuiles 18×18, tilemap-characters_packed.png = persos 24×24 (grille 9×3).
+ * Kompaktes Kenney-Pack: PNG in Tilemap/ (siehe Tiled/*.tsx).
+ * tilemap_packed.png = Kacheln 18×18, tilemap-characters_packed.png = Figuren 24×24 (Raster 9×3).
  */
 
 export function preloadKenneyTilemapPack(load) {
@@ -16,7 +16,7 @@ export function preloadKenneyTilemapPack(load) {
   });
 }
 
-/** Indices = numéro des fichiers character_XXXX (feuille 9 colonnes). */
+/** Indizes = Nummer der character_XXXX-Dateien (Bogen mit 9 Spalten). */
 const CHAR_FRAMES = {
   player: 0,
   villager: 2,
@@ -31,7 +31,7 @@ const CHAR_FRAMES = {
 };
 
 /**
- * Découpe chaque frame personnage en texture nommée (comme les PNG séparés du pack complet).
+ * Schneidet jeden Charakter-Frame in eine benannte Textur (wie einzelne PNG im Vollpack).
  */
 export function extractKenneyCharacterTextures(scene) {
   if (!scene.textures.exists("_kenneyCharSheet")) {

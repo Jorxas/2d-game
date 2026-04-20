@@ -1,5 +1,6 @@
 {
   "name": "2d-action-adventure",
+  "description": "Phaser-3-2D-Action-Adventure-Prototyp (Kenney-Pixel-Assets, Vite)",
   "private": true,
   "type": "module",
   "scripts": {

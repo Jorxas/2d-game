@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 
-/** Sert le jeu en HTTP (nécessaire pour les modules ES + plein écran fiable). */
+/** Spiel per HTTP ausliefern (nötig für ES-Module + zuverlässiges Vollbild). */
 export default defineConfig({
   root: ".",
   publicDir: "public",

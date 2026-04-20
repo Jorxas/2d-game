@@ -1,6 +1,6 @@
 /**
- * Copie kenney_pixel-platformer/ → public/kenney_pixel-platformer/
- * et écrit src/generated/kenneyReady.js (mode split | tilemap | none).
+ * Kopiert kenney_pixel-platformer/ → public/kenney_pixel-platformer/
+ * und schreibt src/generated/kenneyReady.js (Modus split | tilemap | none).
  */
 import fs from "fs";
 import path from "path";
@@ -27,7 +27,7 @@ function hasPng(dir) {
   return false;
 }
 
-/** Pack complet avec fichiers séparés (ZIP Kenney classique). */
+/** Vollständiges Pack mit einzelnen Dateien (klassisches Kenney-ZIP). */
 function hasSplitKenneyPack(dir) {
   if (!fs.existsSync(dir)) return false;
   const critical = [
@@ -38,7 +38,7 @@ function hasSplitKenneyPack(dir) {
   return critical.every((p) => fs.existsSync(p));
 }
 
-/** Pack « Tilemap » (souvent ce que tu as avec Tiled + PNG dans Tilemap/). */
+/** „Tilemap“-Pack (häufig bei Tiled + PNG in Tilemap/). */
 function hasTilemapKenneyPack(dir) {
   if (!fs.existsSync(dir)) return false;
   const a = path.join(dir, "Tilemap", "tilemap_packed.png");
@@ -61,11 +61,11 @@ if (fs.existsSync(src) && (srcMode === "split" || srcMode === "tilemap")) {
 } else if (fs.existsSync(src)) {
   if (hasPng(src)) {
     console.log(
-      "[sync-kenney] PNG présents mais structure non reconnue. Il faut soit le pack complet (Characters/, Tilesheet/, Tiles/), soit au minimum Tilemap/tilemap_packed.png + Tilemap/tilemap-characters_packed.png. Voir https://kenney.nl/assets/pixel-platformer"
+      "[sync-kenney] PNG vorhanden, aber Struktur unbekannt. Entweder das vollständige Pack (Characters/, Tilesheet/, Tiles/) oder mindestens Tilemap/tilemap_packed.png + Tilemap/tilemap-characters_packed.png. Siehe https://kenney.nl/assets/pixel-platformer"
     );
   } else {
     console.log(
-      "[sync-kenney] Aucun .png dans kenney_pixel-platformer/. Télécharge le pack sur https://kenney.nl/assets/pixel-platformer"
+      "[sync-kenney] Keine .png in kenney_pixel-platformer/. Pack laden: https://kenney.nl/assets/pixel-platformer"
     );
   }
 }
@@ -76,6 +76,6 @@ const ready = destMode === "split" || destMode === "tilemap";
 fs.mkdirSync(path.dirname(genFile), { recursive: true });
 fs.writeFileSync(
   genFile,
-  `/** Généré par scripts/sync-kenney.mjs — ne pas éditer à la main */\nexport const KENNEY_ASSETS_READY = ${ready};\nexport const KENNEY_PACK_MODE = ${JSON.stringify(destMode)};\n`
+  `/** Erzeugt von scripts/sync-kenney.mjs — nicht manuell bearbeiten */\nexport const KENNEY_ASSETS_READY = ${ready};\nexport const KENNEY_PACK_MODE = ${JSON.stringify(destMode)};\n`
 );
 console.log(`[sync-kenney] KENNEY_ASSETS_READY=${ready} KENNEY_PACK_MODE=${destMode}`);

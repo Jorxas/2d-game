@@ -1,0 +1,7 @@
+Dieser Ordner wird automatisch von „npm run dev“ gefüllt, wenn im
+Projektstamm ein Ordner kenney_pixel-platformer/ mit den PNG-Dateien
+des offiziellen Packs liegt (Characters, Tilesheet, Tiles).
+
+Kostenloser Download (CC0): https://kenney.nl/assets/pixel-platformer
+
+Du kannst das entpackte Pack auch manuell hierher kopieren.

@@ -1,5 +1,5 @@
 /**
- * Boss intermediaire — patterns proches du chevalier, sans invocation de slimes.
+ * Zwischenboss — Muster ähnlich dem Ritter, ohne Schleim-Beschwörung.
  */
 export class BossGolem extends Phaser.Physics.Arcade.Sprite {
   constructor(scene, x, y) {

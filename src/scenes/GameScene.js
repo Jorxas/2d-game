@@ -26,7 +26,7 @@ import { toggleGameFullscreen } from "../utils/fullscreen.js";
 import { KENNEY_PACK_MODE } from "../generated/kenneyReady.js";
 
 const TILE_SIZE = 18;
-/** Tuiles découpées depuis tilemap_packed (spritesheet) : pas d’espace entre frames. Feuille unique tilesheet_complete : 1 px d’écart Kenney. */
+/** Aus tilemap_packed (Spritesheet) geschnittene Kacheln: kein Abstand zwischen Frames. tilesheet_complete: 1 px Kenney-Zwischenraum. */
 const TERRAIN_TILE_SPACING = KENNEY_PACK_MODE === "split" ? 1 : 0;
 const EDGE_THRESHOLD = 8;
 
@@ -166,7 +166,7 @@ export class GameScene extends Phaser.Scene {
     this.addFullscreenButton();
     this.loadProgressFromStartData();
 
-    // Mode test temporaire: ressources debloquees pour debug rapide.
+    // Temporärer Testmodus: Ressourcen für schnelles Debugging freigeschaltet.
     this.gold = 999999;
     this.hasQuestKey = true;
     this.hasLegendarySword = true;
@@ -454,7 +454,7 @@ export class GameScene extends Phaser.Scene {
     try {
       localStorage.setItem(SAVE_KEY, JSON.stringify(this.buildSaveData()));
     } catch (_error) {
-      // Ignore storage errors (private mode or quota).
+      // Speicherfehler ignorieren (Privatmodus oder Kontingent).
     }
   }
 
@@ -1465,8 +1465,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   /**
-   * Phaser Arcade peut passer les deux gameObjects du overlap dans un ordre variable
-   * (body1/body2). Toujours résoudre le joueur / la hitbox / le groupe explicitement.
+   * Phaser Arcade kann die beiden gameObjects der Überlappung in beliebiger Reihenfolge
+   * liefern (body1/body2). Spieler / Trefferbox / Gruppe immer explizit auflösen.
    */
   pickPlayerAndOther(a, b) {
     if (a === this.player) {
@@ -2151,7 +2151,7 @@ export class GameScene extends Phaser.Scene {
       return;
     }
 
-    // Le boss final est resistant: le gel ralentit visuellement via hit-stun court.
+    // Endboss ist widerstandsfähig: Eis wirkt nur als kurzer visueller Treffer-Stun.
     boss.body.setVelocityX(0);
     this.flashSpriteWhite(boss, 120);
     this.spawnHitImpact(projectile.x, projectile.y);
@@ -2523,7 +2523,7 @@ export class GameScene extends Phaser.Scene {
     try {
       this.applyDamageToSlime(slime, damage, knockbackX);
     } catch (_error) {
-      // Prevent runtime hard-crash during combat in release builds.
+      // Harten Laufzeitabsturz im Kampf in Release-Builds vermeiden.
     }
   }
 
@@ -2659,7 +2659,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   /**
-   * Chrome / navigateurs : AudioContext suspendu jusqu'à un geste utilisateur (clic, touche).
+   * Chrome / Browser: AudioContext bleibt gesperrt, bis zur Nutzerinteraktion (Klick, Taste).
    */
   setupWebAudioUnlock() {
     let done = false;
@@ -3543,8 +3543,8 @@ export class GameScene extends Phaser.Scene {
       return;
     }
 
-    // La boutique doit se fermer avec Q : JustDown ne peut être lu qu'une fois par frame
-    // (Phaser), donc on gère ici avant handleShopMenuInput — sinon Q était "mangé" et ne fermait rien.
+    // Shop muss sich mit Q schließen: JustDown ist nur einmal pro Frame lesbar
+    // (Phaser), daher hier vor handleShopMenuInput — sonst „verschluckt“ Q den Tastendruck.
     if (this.isShopOpen) {
       this.closeShopMenu();
       return;
@@ -4353,7 +4353,7 @@ export class GameScene extends Phaser.Scene {
       try {
         localStorage.removeItem(SAVE_KEY);
       } catch (_error) {
-        // Ignore localStorage errors.
+        // localStorage-Fehler ignorieren.
       }
       overlay.destroy();
       creditsText.destroy();

@@ -9,7 +9,7 @@ const TILE_TEX = 18;
 const TERRAIN_COLS = 72;
 const TERRAIN_ROWS = 48;
 
-/** Textures utilisées par le jeu — si le chargement échoue (404), on génère un substitut. */
+/** Vom Spiel genutzte Texturen — bei Ladefehler (404) wird ein Ersatz erzeugt. */
 const FALLBACK_SPRITES = [
   { key: "player", w: 32, h: 48, color: 0x6ec8ff },
   { key: "slime", w: 36, h: 28, color: 0x7cff9a },
@@ -46,14 +46,14 @@ export class BootScene extends Phaser.Scene {
 
     this.load.on("loaderror", (file) => {
       console.warn(
-        "[Boot] Asset manquant ou inaccessible — texture de secours utilisée :",
+        "[Boot] Asset fehlt oder nicht erreichbar — Ersatztextur wird verwendet:",
         file?.key,
         file?.src
       );
     });
 
     if (KENNEY_PACK_MODE === "tilemap") {
-      /** Uniquement les 2 feuilles Tilemap — pas de Tilesheet/Tiles (sinon 404 et erreurs Phaser). */
+      /** Nur die zwei Tilemap-Bögen — kein Tilesheet/Tiles (sonst 404 und Phaser-Fehler). */
       preloadKenneyTilemapPack(this.load);
       return;
     }
@@ -94,7 +94,7 @@ export class BootScene extends Phaser.Scene {
   }
 
   /**
-   * Tuiles 18×18 comme dans GameScene — assez grande pour les index utilisés dans les niveaux.
+   * Kacheln 18×18 wie in GameScene — groß genug für die in den Levels verwendeten Indizes.
    */
   ensureFallbackTerrainTilesheet() {
     if (this.textures.exists("terrainTiles")) {

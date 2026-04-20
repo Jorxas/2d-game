@@ -1,7 +1,0 @@
-Ce dossier est rempli automatiquement par « npm run dev » si vous avez
-un dossier kenney_pixel-platformer/ à la racine du projet avec les PNG
-du pack officiel (Characters, Tilesheet, Tiles).
-
-Téléchargement gratuit (CC0) : https://kenney.nl/assets/pixel-platformer
-
-Vous pouvez aussi copier manuellement le pack dézippé ici.

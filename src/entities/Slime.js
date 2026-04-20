@@ -4,7 +4,7 @@ import {
   SLIME_SPEED,
 } from "../config/constants.js";
 
-/** Variantes visuelles + PV (2–3 boules de feu typiques avec dégâts = 1). */
+/** Visuelle Varianten + LP (typisch 2–3 Feuerbälle bei Schaden = 1). */
 export const SLIME_VARIANTS = {
   green: {
     textureKey: "enemySlimeGreen",

@@ -1,6 +1,6 @@
 /**
- * Fichiers servis depuis public/kenney_pixel-platformer/ (même arborescence que le pack Kenney officiel).
- * Téléchargement : https://kenney.nl/assets/pixel-platformer (CC0)
+ * Dateien unter public/kenney_pixel-platformer/ (gleiche Struktur wie das offizielle Kenney-Pack).
+ * Download: https://kenney.nl/assets/pixel-platformer (CC0)
  */
 export function kenneyUrl(relativePath) {
   const base = import.meta.env.BASE_URL ?? "/";
