@@ -65,7 +65,7 @@ export const ZONES = {
   zone1: {
     id: "zone1",
     act: 1,
-    name: "Plaines de l'Aube",
+    name: "Morgenebenen",
     zoneWidth: 3200,
     backgroundColor: "#1b1b26",
     parallaxFarTint: 0x24344f,
@@ -114,7 +114,7 @@ export const ZONES = {
         targetZone: "cave",
         targetSpawn: { x: 220, y: H - 210 },
         requiresKey: true,
-        lockedMessage: "C'est verrouille...",
+        lockedMessage: "Verschlossen...",
       },
       {
         x: 2100,
@@ -123,7 +123,7 @@ export const ZONES = {
         targetZone: "zone2",
         targetSpawn: { x: 240, y: H - 200 },
         requiresStoryFlag: "plainePlaque",
-        lockedMessage: "Un mecanisme des plaines doit etre active...",
+        lockedMessage: "Ein Mechanismus in den Ebenen muss aktiviert werden...",
       },
     ],
     npcs: [
@@ -132,13 +132,13 @@ export const ZONES = {
         x: 320,
         y: H - 200,
         dialogue:
-          "Heros ! Les terres s'etendent loin. La cle de la grotte est au-dela de la vallee. Les ombres des ruines attendent...",
+          "Held! Das Land reicht weit. Der Schlüssel zur Höhle liegt hinter dem Tal. Die Schatten der Ruinen warten...",
       },
       {
         type: "merchant",
         x: 520,
         y: H - 200,
-        dialogue: "Bienvenue, voyageur. J'ai de quoi te renforcer.",
+        dialogue: "Willkommen, Reisender. Ich habe etwas, das dich stärker macht.",
       },
     ],
     questItems: [],
@@ -164,7 +164,7 @@ export const ZONES = {
   zone2: {
     id: "zone2",
     act: 1,
-    name: "Vallee de l'Est",
+    name: "Osttal",
     zoneWidth: 3400,
     backgroundColor: "#15202f",
     parallaxFarTint: 0x1d2d3e,
@@ -236,7 +236,7 @@ export const ZONES = {
   zone3: {
     id: "zone3",
     act: 2,
-    name: "Foret des Murmures",
+    name: "Wisperwald",
     zoneWidth: 3600,
     backgroundColor: "#121c18",
     parallaxFarTint: 0x1a3028,
@@ -263,7 +263,7 @@ export const ZONES = {
         x: 800,
         y: H - 200,
         dialogue:
-          "Les racines anciennes cachent des secrets. Trouve la sequence aux statues des ruines.",
+          "Alte Wurzeln verbergen Geheimnisse. Finde die richtige Reihenfolge bei den Statuen der Ruinen.",
       },
     ],
     questItems: [],
@@ -288,7 +288,7 @@ export const ZONES = {
   zone4: {
     id: "zone4",
     act: 2,
-    name: "Ruines Oubliees",
+    name: "Vergessene Ruinen",
     zoneWidth: 3600,
     backgroundColor: "#18151f",
     parallaxFarTint: 0x2a2440,
@@ -334,7 +334,7 @@ export const ZONES = {
   zone5: {
     id: "zone5",
     act: 2,
-    name: "Marais de Brume",
+    name: "Nebelmoor",
     zoneWidth: 3400,
     backgroundColor: "#0f1a16",
     parallaxFarTint: 0x1a3020,
@@ -380,7 +380,7 @@ export const ZONES = {
   zone6: {
     id: "zone6",
     act: 3,
-    name: "Col des Gres",
+    name: "Steinpass",
     zoneWidth: 3600,
     backgroundColor: "#1a1a22",
     parallaxFarTint: 0x333344,
@@ -423,7 +423,7 @@ export const ZONES = {
   zone7: {
     id: "zone7",
     act: 3,
-    name: "Gouffre de Cristal",
+    name: "Kristallschlucht",
     zoneWidth: 3400,
     backgroundColor: "#0d1520",
     parallaxFarTint: 0x152535,
@@ -466,7 +466,7 @@ export const ZONES = {
   zone8: {
     id: "zone8",
     act: 3,
-    name: "Arene du Golem",
+    name: "Golem-Arena",
     zoneWidth: 2800,
     backgroundColor: "#161008",
     parallaxFarTint: 0x3a2818,
@@ -513,7 +513,7 @@ export const ZONES = {
   zone9: {
     id: "zone9",
     act: 3,
-    name: "Route du Trone",
+    name: "Thronweg",
     zoneWidth: 3200,
     backgroundColor: "#120a18",
     parallaxFarTint: 0x2a1038,
@@ -542,7 +542,7 @@ export const ZONES = {
         x: 600,
         y: H - 200,
         dialogue:
-          "Le chateau attend... L'epee legendaire seule ouvrira la derniere porte.",
+          "Das Schloss wartet... Nur das legendäre Schwert öffnet das letzte Tor.",
       },
     ],
     questItems: [],
@@ -563,7 +563,7 @@ export const ZONES = {
   cave: {
     id: "cave",
     act: 1,
-    name: "Grotte Maudite",
+    name: "Verfluchte Höhle",
     zoneWidth: 3000,
     backgroundColor: "#0b0f17",
     parallaxFarTint: 0x0f1824,
@@ -610,7 +610,7 @@ export const ZONES = {
         targetZone: "castle",
         targetSpawn: { x: 180, y: H - 220 },
         requiresLegendarySword: true,
-        lockedMessage: "Une force mystique bloque l'entree...",
+        lockedMessage: "Eine mystische Kraft versperrt den Eingang...",
       },
     ],
     npcs: [],
@@ -632,7 +632,7 @@ export const ZONES = {
   castle: {
     id: "castle",
     act: 4,
-    name: "Salle du Trone",
+    name: "Thronsaal",
     zoneWidth: 3000,
     backgroundColor: "#14071f",
     parallaxFarTint: 0x1a0827,

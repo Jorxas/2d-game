@@ -739,7 +739,7 @@ export class GameScene extends Phaser.Scene {
       sprite.requiresKey = !!door.requiresKey;
       sprite.requiresLegendarySword = !!door.requiresLegendarySword;
       sprite.requiresStoryFlag = door.requiresStoryFlag ?? null;
-      sprite.lockedMessage = door.lockedMessage ?? "C'est verrouille...";
+      sprite.lockedMessage = door.lockedMessage ?? "Verschlossen...";
     });
   }
 
@@ -933,7 +933,7 @@ export class GameScene extends Phaser.Scene {
       }
 
       this.finalBoss = new FinalSorcerer(this, zone.finalBoss.x, zone.finalBoss.y);
-      this.setBossHudVisible(true, "Sorcier du Trone");
+      this.setBossHudVisible(true, "Thronzauberer");
       return;
     }
 
@@ -950,11 +950,11 @@ export class GameScene extends Phaser.Scene {
     if (bType === "golem") {
       this.boss = new BossGolem(this, zone.boss.x, zone.boss.y);
       this.boss.body.setVelocityX(-40);
-      this.setBossHudVisible(true, "Golem de Pierre");
+      this.setBossHudVisible(true, "Steingolem");
     } else {
       this.boss = new BossKnight(this, zone.boss.x, zone.boss.y);
       this.boss.body.setVelocityX(-45);
-      this.setBossHudVisible(true, "Grand Chevalier");
+      this.setBossHudVisible(true, "Großer Ritter");
     }
   }
 
@@ -1333,7 +1333,7 @@ export class GameScene extends Phaser.Scene {
 
     this.activeChest.destroy();
     this.hasLegendarySword = true;
-    this.showDialogue("L'epee legendaire est a toi. Le chateau est desormais ouvert !", 2800);
+    this.showDialogue("Das legendäre Schwert gehört dir. Das Schloss ist jetzt offen!", 2800);
     this.saveProgress();
     return true;
   }
@@ -1424,9 +1424,9 @@ export class GameScene extends Phaser.Scene {
 
     if (item.questType === "key") {
       this.hasQuestKey = true;
-      this.showDialogue("Tu as trouve la cle de la grotte !", 2200);
+      this.showDialogue("Du hast den Schlüssel zur Höhle gefunden!", 2200);
       this.keyInventoryIcon.setAlpha(1);
-      this.keyInventoryLabel.setText("KEY");
+      this.keyInventoryLabel.setText("SCHL");
       this.saveProgress();
     }
 
@@ -1961,10 +1961,10 @@ export class GameScene extends Phaser.Scene {
         }
         if (!ok) {
           this.storyFlags.puzzleSequence = [];
-          this.showDialogue("Les runes s'eteignent...", 1600);
+          this.showDialogue("Die Runen verblassen...", 1600);
         } else if (seq.length === order.length) {
           this.storyFlags.ruinsPuzzleSolved = true;
-          this.showDialogue("Les ruines s'ouvrent ! Un passage se revele.", 2400);
+          this.showDialogue("Die Ruinen öffnen sich! Ein Durchgang erscheint.", 2400);
           this.saveProgress();
         }
       }
@@ -2957,7 +2957,7 @@ export class GameScene extends Phaser.Scene {
       .setVisible(false);
 
     this.bossNameText = this.add
-      .text(this.cameras.main.width * 0.5, 34, "Grand Chevalier", {
+      .text(this.cameras.main.width * 0.5, 34, "Großer Ritter", {
         fontFamily: "Courier New",
         fontSize: "14px",
         color: "#ffe8e8",
@@ -2976,7 +2976,7 @@ export class GameScene extends Phaser.Scene {
       .setVisible(false);
 
     this.gameOverTitle = this.add
-      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.42, "Vous avez peri", {
+      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.42, "Du bist gestorben", {
         fontFamily: "Courier New",
         fontSize: "52px",
         color: "#ffd1d1",
@@ -2988,7 +2988,7 @@ export class GameScene extends Phaser.Scene {
       .setVisible(false);
 
     this.retryButton = this.add
-      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.58, "Reessayer", {
+      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.58, "Erneut versuchen", {
         fontFamily: "Courier New",
         fontSize: "28px",
         color: "#ffffff",
@@ -3013,7 +3013,7 @@ export class GameScene extends Phaser.Scene {
       .text(
         this.cameras.main.width * 0.5,
         this.cameras.main.height * 0.42,
-        "Felicitations !\nVous avez trouve l'epee legendaire !",
+        "Glückwunsch!\nDu hast das legendäre Schwert gefunden!",
         {
           fontFamily: "Courier New",
           fontSize: "40px",
@@ -3031,7 +3031,7 @@ export class GameScene extends Phaser.Scene {
       .text(
         this.cameras.main.width * 0.5,
         this.cameras.main.height * 0.62,
-        "Retour au menu",
+        "Zurück zum Menü",
         {
           fontFamily: "Courier New",
           fontSize: "26px",
@@ -3089,7 +3089,7 @@ export class GameScene extends Phaser.Scene {
       .setVisible(false);
 
     this.journalTitle = this.add
-      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.24, "Journal de quete", {
+      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.24, "Quest-Tagebuch", {
         fontFamily: "Courier New",
         fontSize: "42px",
         color: "#f7f2cc",
@@ -3114,7 +3114,7 @@ export class GameScene extends Phaser.Scene {
       .setVisible(false);
 
     this.journalHintText = this.add
-      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.78, "Appuie sur Q pour fermer", {
+      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.78, "Drücke Q zum Schließen", {
         fontFamily: "Courier New",
         fontSize: "16px",
         color: "#f4d996",
@@ -3134,7 +3134,7 @@ export class GameScene extends Phaser.Scene {
       .setVisible(false);
 
     this.shopTitleText = this.add
-      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.2, "Boutique du marchand", {
+      .text(this.cameras.main.width * 0.5, this.cameras.main.height * 0.2, "Händlerladen", {
         fontFamily: "Courier New",
         fontSize: "38px",
         color: "#f7f1c7",
@@ -3149,7 +3149,7 @@ export class GameScene extends Phaser.Scene {
       .text(
         this.cameras.main.width * 0.5,
         this.cameras.main.height * 0.26,
-        "Fleches + Entree pour acheter, Q pour fermer",
+        "Pfeile + Enter zum Kaufen, Q zum Schließen",
         {
           fontFamily: "Courier New",
           fontSize: "15px",
@@ -3177,22 +3177,22 @@ export class GameScene extends Phaser.Scene {
       {
         id: "potion",
         icon: "heartIcon",
-        title: "Potion de Vie",
-        desc: "Soigne completement",
+        title: "Heiltrank",
+        desc: "Heilt vollständig",
         price: SHOP_HEAL_POTION_COST,
       },
       {
         id: "manaRing",
         icon: "questKey",
-        title: "Anneau de Mana",
-        desc: "Recharge mana +20%",
+        title: "Mana-Ring",
+        desc: "Stellt Mana +20% wieder her",
         price: SHOP_MANA_RING_COST,
       },
       {
         id: "iceSpell",
         icon: "fireball",
-        title: "Sort de Glace",
-        desc: "Debloque X (gel 2s)",
+        title: "Eiszauber",
+        desc: "Schaltet X frei (2s einfrieren)",
         price: SHOP_ICE_SPELL_COST,
       },
     ];
@@ -3289,7 +3289,7 @@ export class GameScene extends Phaser.Scene {
     this.xpBarFill.displayWidth = 346 * xpRatio;
     this.manaBarFill.displayWidth = 158 * manaRatio;
     this.keyInventoryIcon.setAlpha(this.hasQuestKey ? 1 : 0.3);
-    this.keyInventoryLabel.setText(this.hasQuestKey ? "KEY" : "-");
+    this.keyInventoryLabel.setText(this.hasQuestKey ? "SCHL" : "-");
     this.goldText.setText(`${this.gold}`);
 
     const hudBottom = this.cameras.main.height;
@@ -3397,8 +3397,8 @@ export class GameScene extends Phaser.Scene {
       ((this.activeDoor.requiresKey && !this.hasQuestKey) ||
         (this.activeDoor.requiresLegendarySword && !this.hasLegendarySword) ||
         lockedStory)
-        ? "Appuie sur ↑ (verrouille)"
-        : "Appuie sur ↑ pour entrer";
+        ? "Drücke ↑ (verschlossen)"
+        : "Drücke ↑ zum Betreten";
     this.doorPromptText.setText(prompt);
     this.doorPromptText.setPosition(
       this.cameras.main.width * 0.5,
@@ -3431,7 +3431,7 @@ export class GameScene extends Phaser.Scene {
 
   addFullscreenButton() {
     this.fullscreenBtn = this.add
-      .text(0, 10, "[ Plein ecran ]", {
+      .text(0, 10, "[ Vollbild ]", {
         fontFamily: "Arial",
         fontSize: "14px",
         color: "#e8ffcc",
@@ -3530,7 +3530,7 @@ export class GameScene extends Phaser.Scene {
       return;
     }
 
-    this.chestPromptText.setText("Appuie sur ↑ pour ouvrir le coffre");
+    this.chestPromptText.setText("Drücke ↑, um die Truhe zu öffnen");
     this.chestPromptText.setPosition(
       this.cameras.main.width * 0.5,
       this.cameras.main.height - 56
@@ -3597,7 +3597,7 @@ export class GameScene extends Phaser.Scene {
     const entries = this.getQuestEntries();
     const text = entries
       .map((entry, index) => {
-        const status = entry.done ? "[TERMINE]" : "[EN COURS]";
+        const status = entry.done ? "[ERLEDIGT]" : "[AKTIV]";
         return `${index + 1}. ${entry.label} ${status}`;
       })
       .join("\n\n");
@@ -3613,12 +3613,12 @@ export class GameScene extends Phaser.Scene {
     const finalBossDone = this.finalBossDefeated;
 
     return [
-      { id: "key", label: "Trouver la cle (vallee de l'Est)", done: findKeyDone },
-      { id: "boss", label: "Vaincre le Grand Chevalier", done: bossDone },
-      { id: "ruins", label: "Enigme des statues (Ruines Oubliees)", done: ruinsDone },
-      { id: "golem", label: "Vaincre le Golem", done: golemDone },
-      { id: "chest", label: "Ouvrir le coffre legendaire", done: chestDone },
-      { id: "finalBoss", label: "Vaincre le Sorcier du Trone", done: finalBossDone },
+      { id: "key", label: "Finde den Schlüssel (Osttal)", done: findKeyDone },
+      { id: "boss", label: "Besiege den Großen Ritter", done: bossDone },
+      { id: "ruins", label: "Statuenrätsel (Vergessene Ruinen)", done: ruinsDone },
+      { id: "golem", label: "Besiege den Golem", done: golemDone },
+      { id: "chest", label: "Öffne die legendäre Truhe", done: chestDone },
+      { id: "finalBoss", label: "Besiege den Thronzauberer", done: finalBossDone },
     ];
   }
 
@@ -3866,7 +3866,7 @@ export class GameScene extends Phaser.Scene {
       return;
     }
 
-    this.merchantPromptText.setText("Appuie sur ↑ pour parler au marchand");
+    this.merchantPromptText.setText("Drücke ↑, um mit dem Händler zu sprechen");
     this.merchantPromptText.setPosition(
       this.cameras.main.width * 0.5,
       this.cameras.main.height - 88
@@ -3878,20 +3878,20 @@ export class GameScene extends Phaser.Scene {
     return [
       {
         id: "potion",
-        title: "Potion de Vie",
-        description: "Rend tous les HP",
+        title: "Heiltrank",
+        description: "Stellt alle LP wieder her",
         price: SHOP_HEAL_POTION_COST,
       },
       {
         id: "manaRing",
-        title: "Anneau de Mana",
-        description: "Recharge mana +20%",
+        title: "Mana-Ring",
+        description: "Stellt Mana +20% wieder her",
         price: SHOP_MANA_RING_COST,
       },
       {
         id: "iceSpell",
-        title: "Sort de Glace",
-        description: "Debloque sort X (gel 2s)",
+        title: "Eiszauber",
+        description: "Schaltet Zauber X frei (2s einfrieren)",
         price: SHOP_ICE_SPELL_COST,
       },
     ];
@@ -3985,12 +3985,12 @@ export class GameScene extends Phaser.Scene {
     }
 
     if (this.gold < item.price) {
-      this.showShopMessage("Pas assez d'or !");
+      this.showShopMessage("Nicht genug Gold!");
       return;
     }
 
     if (itemId === "iceSpell" && this.player.hasIceSpell) {
-      this.showShopMessage("Sort de glace deja appris.");
+      this.showShopMessage("Eiszauber bereits gelernt.");
       return;
     }
 
@@ -4005,7 +4005,7 @@ export class GameScene extends Phaser.Scene {
     }
 
     this.playSfx("shopChing");
-    this.showShopMessage("Achat valide !");
+    this.showShopMessage("Kauf bestätigt!");
     this.saveProgress();
   }
 
@@ -4045,7 +4045,7 @@ export class GameScene extends Phaser.Scene {
       .text(
         this.cameras.main.width * 0.5,
         this.cameras.main.height * 0.26,
-        "Choisis un talent (Fleches + Entree ou clic)",
+        "Wähle ein Talent (Pfeile + Enter oder Klick)",
         {
           fontFamily: "Courier New",
           fontSize: "16px",
@@ -4061,8 +4061,8 @@ export class GameScene extends Phaser.Scene {
       {
         id: "strength",
         icon: "swordSlash",
-        title: "Force",
-        desc: "Degats epee +2",
+        title: "Stärke",
+        desc: "Schwertschaden +2",
       },
       {
         id: "magic",
@@ -4073,8 +4073,8 @@ export class GameScene extends Phaser.Scene {
       {
         id: "health",
         icon: "heartIcon",
-        title: "Sante",
-        desc: "HP max +1 et soin complet",
+        title: "Gesundheit",
+        desc: "Max LP +1 und volle Heilung",
       },
     ];
 
@@ -4182,7 +4182,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   refreshLevelUpSelectionVisual() {
-    this.levelUpTitle.setText(`Niveau ${this.player.getLevel()} - Choisis un talent`);
+    this.levelUpTitle.setText(`Level ${this.player.getLevel()} - Wähle ein Talent`);
     this.levelUpOptions.forEach((option, index) => {
       const selected = index === this.activeLevelUpIndex;
       option.bg.setFillStyle(selected ? 0x2f5ea2 : 0x223757, 0.95);
@@ -4329,7 +4329,7 @@ export class GameScene extends Phaser.Scene {
       .text(
         this.cameras.main.width * 0.5,
         this.cameras.main.height + 140,
-        "Felicitations Heros !\nLa paix est revenue sur le royaume...\n\nCredits\nCree par Ton Nom\navec l'aide de Cursor",
+        "Glückwunsch, Held!\nDer Frieden ist in das Königreich zurückgekehrt...\n\nCredits\nErstellt von jordan freddy\nmit Hilfe von Cursor",
         {
           fontFamily: "Courier New",
           fontSize: "34px",
@@ -4367,7 +4367,7 @@ export class GameScene extends Phaser.Scene {
       .text(
         16,
         118,
-        "Move: A/D or <-/-> | Jump x2: W/UP | Sword: SPACE | Fireball: Z | Ice: X | Talk/Enter: UP | Journal: Q | Plein ecran: F ou P ou bouton | Stages test: 1/2/3/4",
+        "Bewegen: A/D oder <-/-> | Doppelsprung: W/HOCH | Schwert: LEERTASTE | Feuerball: Z | Eis: X | Sprechen/Betreten: HOCH | Journal: Q | Vollbild: F oder P oder Button | Test-Stages: 1/2/3/4",
         {
           fontFamily: "Arial",
           fontSize: "16px",

@@ -34,7 +34,7 @@ export class MainMenuScene extends Phaser.Scene {
       .setOrigin(0.5);
 
     this.add
-      .text(width * 0.5, 200, "Action aventure 2D", {
+      .text(width * 0.5, 200, "2D-Action-Abenteuer", {
         fontFamily: "Courier New",
         fontSize: "20px",
         color: "#9ec4ff",
@@ -44,7 +44,7 @@ export class MainMenuScene extends Phaser.Scene {
     const startButton = this.createButton(
       width * 0.5,
       height * 0.5 - 20,
-      "Commencer l'aventure"
+      "Abenteuer starten"
     );
     startButton.on("pointerup", () => {
       this.scene.start("game", { continueFromSave: false });
@@ -53,7 +53,7 @@ export class MainMenuScene extends Phaser.Scene {
     const continueButton = this.createButton(
       width * 0.5,
       height * 0.5 + 60,
-      "Continuer"
+      "Fortsetzen"
     );
 
     const saveData = this.readSaveData();
@@ -72,7 +72,7 @@ export class MainMenuScene extends Phaser.Scene {
     const fsBtn = this.createButton(
       width * 0.5,
       height * 0.5 + 130,
-      "Plein ecran (F, P ou clic)"
+      "Vollbild (F, P oder Klick)"
     );
     fsBtn.on("pointerup", () => {
       toggleGameFullscreen().then(() => {
